@@ -4,8 +4,7 @@ import {
   UserGroupIcon,
   InboxIcon,
 } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
-
+import { Lusitana } from 'next/font/google';
 const iconMap = {
   collected: BanknotesIcon,
   customers: UserGroupIcon,
@@ -14,6 +13,9 @@ const iconMap = {
 };
 
 export default async function CardWrapper() {
+  
+  const lusitana = Lusitana({ subsets: ['latin'], weight: ['400'] }); // Call it first
+
   return (
     <>
       {/* NOTE: Uncomment this code in Chapter 9 */}
